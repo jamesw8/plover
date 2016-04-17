@@ -7,10 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
 // of existing objectives and deadlines
 
 
-var counter=0;
 
-var array= ;
-new Array = array1;
+var array=[];
 
 function addObj() {
    var obj = document.getElementById("newObjective").value;
@@ -23,15 +21,9 @@ function addObj() {
    if(obj == "" || ded == "") {
      alert("Objective text field is empty");
   } else {
-     array1=new Array(counter);
-    for (var i = 0; i<=counter; i++){
-      if(i<counter)
-        array1[i]=array[i];
-    }
-    array1[i] = ded;
-    
-    console.log(array1);
-    counter++;
+    array.push(ded);
+  
+    console.log(array);
     //alert("obj is "+obj+" and ded is "+ded);
     //alert(document.getElementById("lifegiver").outerHTML);
     d=document.getElementById("lifegiver");
