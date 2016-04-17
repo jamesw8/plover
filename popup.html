@@ -1,0 +1,60 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Plover</title>
+    <link rel="stylesheet" type="popup.css" href="popup.css">
+    <script type="text/javascript" src="popup.js"></script>
+    
+  </head>
+  <body>
+  <div id="container">
+  <table>  
+    <tr>
+      <td> New Objective: </td>
+      <td> Deadline: </td> 
+      <td></td>
+    </tr>
+     
+  
+    <tr>
+      <form>
+      <td> <input type="text" id="newObjective" placeholder="New Objective"> </td>
+      <td> <input type="text" id="newDeadline" placeholder="Deadline"> </td> 
+      </form>
+      <td> </td>
+    </tr>
+  </table>
+
+  <br>
+   <button id="newGoal" onclick="addObj()">New Goal</button>
+  <br>
+  <br>
+  <p>Current Objectives: </p>
+  <table class="objectTable">  
+    <tr>
+      <td> Objective: </td>
+      <td> Deadline: </td>
+      <br id="lifegiver">
+    </tr>
+     
+  
+  </table>
+   
+   <br>
+   <br>
+   <br>
+  
+   <button id="start">Start</button>
+ </form>
+
+
+  </div>
+
+  </body>
+</html>
+
