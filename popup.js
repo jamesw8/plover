@@ -31,14 +31,35 @@ function addObj() {
     d.outerHTML = stringerino;
   }
 }
-
+var start=false;
+var total=0;
+var k=0;
 function startTimer() {
-  var startDate = new Date();
-  var startTime = startDate.getTime();
-  setTimeout(times, 3000);
-}
-
-function setAlarms() {
-
+  var totalHrs = document.getElementById("totalHours").value;
+  if(!start)
+    for(var i = 0; i<array.length; i++) {
+      total+=parseInt(array[i]);
+    }
+    start = true;
+    for(var j = 0; j<array.length; j++) {
+      k=j+1;
+      array[j] = (parseFloat(array[j])/parseFloat(total))*totalHrs;
+    alert("You have "+array[j]+" hours to complete task "+k);
+    
+    }
+    
+  
+  /*var startTime = new Date();
+  var halfTime = startTime.getMilliseconds()+(totalHrs*60*60*1000)/2;
+  var endTime = startTime.getMilliseconds()+totalHrs*60*60*1000;
+  var alarmInfo = {
+      'when':halfTime
+    };
+    var alarmInfoL = {
+      'when':endTime
+    };
+  chrome.alarms.create(alarmInfo);
+  chrome.alarms.create(alarmInfoL);
+  //setTimeout(times, 3000);*/
 }
 
