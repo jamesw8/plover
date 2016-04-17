@@ -7,16 +7,20 @@
 <html>
   <head>
     <title>Plover</title>
-    <link rel="stylesheet" type="popup.css" href="popup.css">
+    <!---<link rel="stylesheet" type="popup.css" href="popup.css"> -->
+    <link href="bootstrap.min.css" rel="stylesheet" media="screen">
     <script type="text/javascript" src="popup.js"></script>
+
     
   </head>
   <body>
   <div id="container">
+    <h1>Plover</h1>
+    <h4>Add New Objective</h4>
   <table>  
     <tr>
-      <td> New Objective: </td>
-      <td> Deadline: </td> 
+      <td><h5> New Objective:  </h5></td>
+      <td><h5> Relative Time to Complete Task:  </h5></td> 
       <td></td>
     </tr>
      
@@ -24,33 +28,35 @@
     <tr>
       <form>
       <td> <input type="text" id="newObjective" placeholder="New Objective"> </td>
-      <td> <input type="text" id="newDeadline" placeholder="Deadline"> </td> 
+      <td> 
+        <input type="radio" name="rating" id="_1" value="1">
+        <input type="radio" name="rating" id="_2" value="2">
+        <input type="radio" name="rating" id="_3" value="3">
+        <input type="radio" name="rating" id="_4" value="4">
+        <input type="radio" name="rating" id="_5" value="5">
+      </td> 
       </form>
       <td> </td>
     </tr>
   </table>
 
+  <br>  <br>  <br>  <br>
+   <button id="newGoal" >New Goal</button>
   <br>
-   <button id="newGoal" onclick="addObj()">New Goal</button>
   <br>
   <br>
-  <p>Current Objectives: </p>
+  <h4>Current Objectives: </h4>
   <table class="objectTable">  
     <tr>
-      <td> Objective: </td>
-      <td> Deadline: </td>
-      <br id="lifegiver">
+      <td><h5> Objective: </h5></td>
+      <td><h5> Relative Time to Complete Task: </h5></td>
+      
     </tr>
-     
-  
+    <br id="lifegiver">
   </table>
-   
-   <br>
-   <br>
-   <br>
-  
+   <br><br> <br><br>
    <button id="start">Start</button>
- </form>
+
 
 
   </div>
