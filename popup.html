@@ -4,17 +4,23 @@
  "browser_action" field in manifest.json contains the "default_popup" key with
  value "popup.html".
  -->
-<html>
+<html lang="en">
   <head>
     <title>Plover</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!---<link rel="stylesheet" type="popup.css" href="popup.css"> -->
     <link href="bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="bootstrap-responsive.css" rel="stylesheet">
+    <link href="bootstrap-responsive.min.css" rel="stylesheet">
+
     <script type="text/javascript" src="popup.js"></script>
 
     
   </head>
   <body>
-  <div id="container">
+  <div id="container" class="container-fluid">
     <h1>Plover</h1>
     <h4>Add New Objective</h4>
   <table>  
@@ -46,14 +52,17 @@
   <br>
   <br>
   <h4>Current Objectives: </h4>
-  <table class="objectTable">  
+  <table class="objectTable" id="objectTable">  
     <tr>
       <td><h5> Objective: </h5></td>
       <td><h5> Relative Time to Complete Task: </h5></td>
-      
+      <br id="lifegiver">
     </tr>
-    <br id="lifegiver">
+    
   </table>
+  <br>
+  <br>
+  <h4>Total Hours Needed: </h4><form><input type="text" id="totalHours"></input></form>
    <br><br> <br><br>
    <button id="start">Start</button>
 
